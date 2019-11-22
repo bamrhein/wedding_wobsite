@@ -1,0 +1,29 @@
+html, body, p, h1, h2, h3 form, div, ul, ol, li, table, tbody, tr, td, th, a {
+    background-color: #9EB490;
+    font-family: courier;
+}
+
+/* leave or rename to "home-content"? */
+.eatme {
+	text-align: center;
+	width: 100%;
+}
+
+.eatme table {
+	margin-left: auto;
+	margin-right: auto;
+	/* TODO: fix td alignment */
+	/*width: 30%;*/
+	/*text-align: center;*/
+}
+
+.eatme table tbody tr td {
+	text-align: center;
+	margin: 0 auto;
+	padding: 0 auto;
+}
+
+/*.eatme table tbody tr td {
+	padding-left: 10px;
+	padding-right: 10px;
+}*/
