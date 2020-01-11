@@ -1,28 +1,8 @@
 <!DOCTYPE html>
 
-<!--
-
-Frontend webdev is such a giant ball of the inside of my ass. If I used a
-framework or generator for this, it would be a buttjillion lines of CSS/HTML.
-
-Doing it manually is still very annoying. And it won't be "responsive", because
-fuuuuck all of that noise :V
-
-That said, doing it like a 90s webdev is a big part of the charm. I want it
-to be "coded" in the same style as its appearance. Web 1.0, baybeee!
-
-Make it look like Geocities. Don't do "modern" tricks unless it's needed to
-make the design look more retro.
-
-Glad we had this talk.
-
--->
-
 <html>
 <head>
     <title>Burger &amp; King</title>
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="css/style.css">
 
@@ -35,23 +15,42 @@ Glad we had this talk.
     <!-- glitter scrollbar -->
     <link rel="stylesheet" href="css/glitterbar.css">
 
+    <!-- scale.js for responsive design hack -->
+    <!-- <script type="text/javascript" src="js/scale.js"></script> -->
+
 </head>
 
 <body>
+
     <img src="images/lignelongue_rosesrose_anim.gif" />
 
     <div class="homebanner">
-        <img src="images/flycupid.gif"/>
-        <div class="title">~ B & K ~</div>
+        <img src="images/flycupid.gif" />
+        <div class="title">.:* logistics *:.</div>
         <img src="images/butterflyrockplant.gif" />
     </div>
 
     <div class="content">
-        <img src="images/brent_katie.jpg" class="home-img" />
-        <p>Moab, Utah - 05/02/2020</p>
+        <div class="row">
+        	<div class="box" style="background-color: yellow;">
+        		<p>~schedule~</p>
+        	</div>
+        	<div class="box" style="background-color: pink;">
+        		<p>~lodging~</p>
+        	</div>
+        </div>
+
+        <div class="row">
+        	<div class="box" style="background-color: purple;">
+        		<p>~travel~</p>
+        	</div>
+        	<div class="box" style="background-color: orange;">
+        		<p>~hike info~</p>
+        	</div>
+        </div>
     </div>
 
-    <div class="footer">
+    <div class="row footer">
         <img src="images/treesep4.gif" />
     </div>
 

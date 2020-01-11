@@ -1,0 +1,30 @@
+/**
+ * Taken and modified from
+ * https://codepen.io/ashavenger/pen/GQpJva
+ *
+ * Thanks, Ash Princess Kawaii!! :V
+ */
+
+::-webkit-scrollbar{
+    width: 15px;
+    height: auto
+}
+
+::-webkit-scrollbar-thumb:vertical,
+::-webkit-scrollbar-thumb:horizontal {
+    background: url("../images/glitterbar/glitter5.gif");
+    border-radius: 20px
+}
+
+::-webkit-scrollbar-button:start:decrement,
+::-webkit-scrollbar-button:end:increment {
+    height: 15px;
+    display: block;
+    background: url("../images/glitterbar/glitter5.gif");
+    border-radius: 20px
+}
+
+::-webkit-scrollbar-track-piece {
+    background: #222;
+    border-radius: 20px
+}

@@ -1,29 +1,136 @@
 html, body, p, h1, h2, h3 form, div, ul, ol, li, table, tbody, tr, td, th, a {
-    background-color: #9EB490;
+    /*background-color: #9EB490;*/
+    background-color: #9fbda0;
     font-family: courier;
 }
 
-/* leave or rename to "home-content"? */
-.eatme {
-	text-align: center;
-	width: 100%;
+body {
+    text-align: center;
+    width: 100%;
+    margin: 5% 0%;
+    /*font-size: 1vw;*/
 }
 
-.eatme table {
-	margin-left: auto;
-	margin-right: auto;
-	/* TODO: fix td alignment */
-	/*width: 30%;*/
-	/*text-align: center;*/
+a {
+    color: #000000;
 }
 
-.eatme table tbody tr td {
-	text-align: center;
-	margin: 0 auto;
-	padding: 0 auto;
+/* TODO: Ask Katie if she wants links to change color once visited */
+a:visited {
+    color: #444444;
 }
 
-/*.eatme table tbody tr td {
-	padding-left: 10px;
-	padding-right: 10px;
-}*/
+div.row {
+    display: inline-block;
+    *display: inline;
+}
+
+.title {
+    /*font-size: 30px;*/
+    /*font-size: 320%;*/
+    font-size: 3.2vw;
+    margin: 0% 15%;
+    vertical-align: top;
+}
+
+.homebanner img,
+.homebanner div {
+    display: inline-block;
+    *display: inline;
+}
+
+/*@media only screen and (min-width: 768px) {*/
+.homebanner img {
+    width: 90px;
+    height: 98px;
+    top: 0;
+}
+/*}*/
+
+.content {
+    margin: 0 auto;
+}
+
+.content .home-img {
+    width: 200px;
+}
+
+.content p {
+    font-size: 120%;
+}
+
+.content .box {
+    margin: 15px;
+    border: 3px solid #999999;
+    padding: 50px;
+    overflow: auto !important;
+}
+
+.content .box p {
+    background-color: inherit;
+}
+
+
+/**
+ * Form styling
+ */
+form {
+    text-align: left;
+    margin: 0 auto;
+    width: 25%;
+}
+
+form input {
+    /*margin-top: 15px;*/
+    /*margin-bottom: 15px;*/
+    margin: 15px 0px;
+    padding: 0px 0px;
+    width: 100%;
+    font-size: 139%;
+}
+
+form input[type="radio"] {
+    width: 1em;
+    margin-right: 0;
+}
+
+form .radio-wrapper > input,
+form .radio-wrapper > div {
+    display: inline-block;
+    *display: inline;
+}
+
+form input[type="submit"] {
+    /*text-align: center;*/
+    /*margin: 0 auto;*/
+    /*font-size: 16px;*/
+    width: 20%;
+    /*padding: 2%;*/
+    margin-left: 40%;
+    margin-right: 40%;
+}
+
+.footer {
+    width: 100%;
+    margin-top: 39px;
+}
+
+.footer div {
+    text-align: center;
+    display: inline-block;
+    *display: inline;
+    margin: 0% 2%;
+}
+
+
+/**
+ * Responsive shit
+ */
+@media only screen and (max-width: 768px) {
+    .content img,
+    .homebanner img,
+    .footer img {
+        width: 30%;
+        height: 30%;
+    }
+}
