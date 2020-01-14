@@ -26,18 +26,6 @@ a {
     background-color: inherit;
 }
 
-.footer {
-    width: 100%;
-    margin-top: 39px;
-}
-
-.footer div {
-    text-align: center;
-    display: inline-block;
-    *display: inline;
-    margin: 0% 2%;
-}
-
 
 /**********************************************************************
  * Responsive + grid CSS
@@ -89,6 +77,10 @@ a {
         width: 40vw;
     }
 
+    .home-text {
+        font-size: 3.5vw;
+    }
+
     .tree-sep {
         width: 80%;
         height: 80%;
@@ -129,6 +121,19 @@ a {
         -webkit-appearance: none;
         -moz-appearance: none;
         appearance: none;
+    }
+
+    .footer {
+        width: 100%;
+        margin-top: 39px;
+    }
+
+    .footer div {
+        font-size: 3.5vw;
+        text-align: center;
+        display: inline-block;
+        *display: inline;
+        margin: 0% 2%;
     }
 }
 
@@ -183,5 +188,17 @@ a {
         width: 20%;
         margin-left: 40%;
         margin-right: 40%;
+    }
+
+    .footer {
+        width: 100%;
+        margin-top: 39px;
+    }
+
+    .footer div {
+        text-align: center;
+        display: inline-block;
+        *display: inline;
+        margin: 0% 2%;
     }
 }
