@@ -24,33 +24,41 @@
 
     <img src="images/lignelongue_rosesrose_anim.gif" />
 
-    <div class="homebanner">
-        <img src="images/flycupid.gif" />
-        <div class="title">.:* rsvp *:.</div>
-        <img src="images/butterflyrockplant.gif" />
+    <div class="row">
+        <div class="left">
+            <img class="banner-img" src="images/flycupid.gif"/>
+        </div>
+        <div class="middle title">.:* rsvp *:.</div>
+        <div class="right">
+            <img class="banner-img" src="images/butterflyrockplant.gif" />
+        </div>
     </div>
 
-    <div class="content">
-        <form action="" method="post">
-            <input type="text" name="fullname" placeholder="full name" />
-            <br/>
-            <input type="text" name="phone" placeholder="phone number" />
-            <br/>
-            <input type="text" name="email" placeholder="email" />
-            <br/>
-            <div class="radio-wrapper">
-                <input type="radio" name="coming" value="Yes" />
-                <div>we'll b there!</div>
+    <div class="row">
+        <div class="left"><p></p></div>
+        <div class="middle">
+            <form action="" method="post">
+                <input type="text" name="fullname" placeholder="full name" />
                 <br/>
-                <input type="radio" name="coming" value="No" />
-                <div>we'll b somewhere else :(</div>
-            </div>
-            <input type="submit" value="submit" />
-        </form>
+                <input type="text" name="phone" placeholder="phone number" />
+                <br/>
+                <input type="text" name="email" placeholder="email" />
+                <br/>
+                <div class="radio-wrapper">
+                    <input type="radio" name="coming" value="Yes" />
+                    <div class="radio-text">we'll b there!</div>
+                    <br/>
+                    <input type="radio" name="coming" value="No" />
+                    <div class="radio-text">we'll b somewhere else :(</div>
+                </div>
+                <input type="submit" value="submit" />
+            </form>
+        </div>
+        <div class="right"><p></p></div>
     </div>
 
     <div class="row footer">
-        <img src="images/treesep4.gif" />
+        <img class="tree-sep" src="images/treesep4.gif" />
     </div>
 
     <div class="row footer">
@@ -60,8 +68,6 @@
         <div><a href="rsvp.html">rsvp</a></div>
         <div>-</div>
         <div><a href="logistics.html">logistics</a></div>
-        <div>-</div>
-        <div><a href="registry.html">registry</a></div>
         <div>~</div>
     </div>
 
