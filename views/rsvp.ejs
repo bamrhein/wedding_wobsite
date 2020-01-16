@@ -38,21 +38,29 @@
         <div class="left"><p></p></div>
         <div class="middle">
             <form action="/rsvp" method="post">
-                <input type="text" name="fullname" placeholder="full name" />
+                <input type="text" name="fullname" placeholder="full name" value="<%= fullname %>" />
                 <br/>
-                <input type="text" name="phone" placeholder="phone number" />
+                <input type="text" name="phone" placeholder="phone number" value="<%= phone %>" />
                 <br/>
-                <input type="text" name="email" placeholder="email" />
+                <input type="text" name="email" placeholder="email" value="<%= email %>" />
                 <br/>
                 <div class="radio-wrapper">
-                    <input type="radio" name="coming" value="Yes" />
+                    <input type="radio" name="coming" value="Yes" <%= coming %> />
                     <div class="radio-text">we'll b there!</div>
                     <br/>
-                    <input type="radio" name="coming" value="No" />
+                    <input type="radio" name="coming" value="No" <%= notComing %> />
                     <div class="radio-text">we'll b somewhere else :(</div>
                 </div>
                 <input type="submit" value="submit" />
             </form>
+        </div>
+        <div class="right"><p></p></div>
+    </div>
+
+    <div class="row">
+        <div class="left"><p></p></div>
+        <div class="middle">
+            <p class='submitted'><%= message %></p>
         </div>
         <div class="right"><p></p></div>
     </div>
@@ -63,11 +71,11 @@
 
     <div class="row footer">
         <div>~</div>
-        <div><a href="index.html">home</a></div>
+        <div><a href="/">home</a></div>
         <div>-</div>
-        <div><a href="rsvp.html">rsvp</a></div>
+        <div><a href="/rsvp">rsvp</a></div>
         <div>-</div>
-        <div><a href="logistics.html">logistics</a></div>
+        <div><a href="/logistics">logistics</a></div>
         <div>~</div>
     </div>
 

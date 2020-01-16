@@ -1,8 +1,28 @@
 <!DOCTYPE html>
 
+<!--
+
+Frontend webdev is such a giant ball of the inside of my ass. If I used a
+framework or generator for this, it would be a buttjillion lines of CSS/HTML.
+
+Doing it manually is still very annoying. And it won't be "responsive", because
+fuuuuck all of that noise :V
+
+That said, doing it like a 90s webdev is a big part of the charm. I want it
+to be "coded" in the same style as its appearance. Web 1.0, baybeee!
+
+Make it look like Geocities. Don't do "modern" tricks unless it's needed to
+make the design look more retro.
+
+Glad we had this talk.
+
+-->
+
 <html>
 <head>
     <title>Burger &amp; King</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="css/style.css">
 
@@ -15,20 +35,16 @@
     <!-- glitter scrollbar -->
     <link rel="stylesheet" href="css/glitterbar.css">
 
-    <!-- scale.js for responsive design hack -->
-    <!-- <script type="text/javascript" src="js/scale.js"></script> -->
-
 </head>
 
 <body>
-
     <img src="images/lignelongue_rosesrose_anim.gif" />
 
     <div class="row">
         <div class="left">
             <img class="banner-img" src="images/flycupid.gif"/>
         </div>
-        <div class="middle title">.:* rsvp *:.</div>
+        <div class="middle title">~ B & K ~</div>
         <div class="right">
             <img class="banner-img" src="images/butterflyrockplant.gif" />
         </div>
@@ -37,22 +53,8 @@
     <div class="row">
         <div class="left"><p></p></div>
         <div class="middle">
-            <form action="/rsvp" method="post">
-                <input type="text" name="fullname" placeholder="full name" />
-                <br/>
-                <input type="text" name="phone" placeholder="phone number" />
-                <br/>
-                <input type="text" name="email" placeholder="email" />
-                <br/>
-                <div class="radio-wrapper">
-                    <input type="radio" name="coming" value="Yes" />
-                    <div class="radio-text">we'll b there!</div>
-                    <br/>
-                    <input type="radio" name="coming" value="No" />
-                    <div class="radio-text">we'll b somewhere else :(</div>
-                </div>
-                <input type="submit" value="submit" />
-            </form>
+            <img class="home-img" src="images/brent_katie.jpg" />
+            <p class="home-text">Moab, Utah - 05/02/2020</p>
         </div>
         <div class="right"><p></p></div>
     </div>
@@ -63,11 +65,11 @@
 
     <div class="row footer">
         <div>~</div>
-        <div><a href="index.html">home</a></div>
+        <div><a href="/">home</a></div>
         <div>-</div>
-        <div><a href="rsvp.html">rsvp</a></div>
+        <div><a href="/rsvp">rsvp</a></div>
         <div>-</div>
-        <div><a href="logistics.html">logistics</a></div>
+        <div><a href="/logistics">logistics</a></div>
         <div>~</div>
     </div>
 
