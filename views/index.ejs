@@ -2,19 +2,21 @@
 
 <!--
 
-Frontend webdev is such a giant ball of the inside of my ass. If I used a
-framework or generator for this, it would be a buttjillion lines of CSS/HTML.
+Katie and I wanted to make a retro, geocities-esque, Web 1.0 wobsite.
+Here's what we came up with.
 
-Doing it manually is still very annoying. And it won't be "responsive", because
-fuuuuck all of that noise :V
+Given the style decision, I set out to "code" the frontend to be as
+"Web 1.0" as possible, which meant no frameworks and no responsive CSS.
+That didn't last long, because I really wanted it to look good on
+mobile devices. So I added responsive CSS. Still no Bootstrap, though!
 
-That said, doing it like a 90s webdev is a big part of the charm. I want it
-to be "coded" in the same style as its appearance. Web 1.0, baybeee!
+I also threw in some third-party JS for vanity features like the
+sparkle cursor and scrollbar, per Katie's request. ;)
 
-Make it look like Geocities. Don't do "modern" tricks unless it's needed to
-make the design look more retro.
+The implementation is still pretty straightforward and simple. I'm sure
+a *real* frontend dev could do much better. Please do! I hate frontend!
 
-Glad we had this talk.
+https://github.com/bamrhein/wedding_wobsite
 
 -->
 
@@ -30,7 +32,7 @@ Glad we had this talk.
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
-    <!-- <script type="text/javascript" src="js/sparkle_cursor.js"></script> -->
+    <script type="text/javascript" src="js/sparkle_cursor.js"></script>
 
     <!-- glitter scrollbar -->
     <link rel="stylesheet" href="css/glitterbar.css">
@@ -53,7 +55,7 @@ Glad we had this talk.
     <div class="row">
         <div class="left"><p></p></div>
         <div class="middle">
-            <img class="home-img" src="images/brent_katie.jpg" />
+            <img class="home-img" src="images/brent_katie_rock_border.png" />
             <p class="home-text">Moab, Utah - 05/02/2020</p>
         </div>
         <div class="right"><p></p></div>

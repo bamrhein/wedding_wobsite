@@ -10,13 +10,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
-    <!-- <script type="text/javascript" src="js/sparkle_cursor.js"></script> -->
+    <script type="text/javascript" src="js/sparkle_cursor.js"></script>
 
     <!-- glitter scrollbar -->
     <link rel="stylesheet" href="css/glitterbar.css">
-
-    <!-- scale.js for responsive design hack -->
-    <!-- <script type="text/javascript" src="js/scale.js"></script> -->
 
 </head>
 
@@ -60,7 +57,7 @@
     <div class="row">
         <div class="left"><p></p></div>
         <div class="middle">
-            <p class='submitted'><%= message %></p>
+            <p class='submitted' style="display: <%= display %>"><%= message %></p>
         </div>
         <div class="right"><p></p></div>
     </div>

@@ -51,10 +51,21 @@ if (ie)
     document.write('</div></div>');
 (ns||n6)?window.captureEvents(Event.MOUSEMOVE):0;
 
-function Mouse(evnt){
+function Mouse(evnt) {
+    console.log('MOUSE');
 
-    y = (ns||n6)?evnt.pageY+4 - window.pageYOffset:event.y+4;
-    x = (ns||n6)?evnt.pageX+1:event.x+1;
+    // y = (ns||n6)?evnt.pageY+4 - window.pageYOffset:event.y+4;
+    // x = (ns||n6)?evnt.pageX+1:event.x+1;
+
+    if (ns || n6) {
+        console.log('IF');
+        y = evnt.pageY+4 - window.pageYOffset;
+        x = evnt.pageX+1;
+    } else {
+        console.log('ELSE')
+        y = event.y+4;
+        x = event.x+1;
+    }
 }
 
 (ns)?window.onMouseMove=Mouse:document.onmousemove=Mouse;
@@ -81,9 +92,11 @@ function animate(){
 
         }
         else{
-
-            temp1.top = y+o + 'px';
-            temp1.left = x + 'px';
+            // EDIT: Added the `+ 15` and `+ 5` to keep the sparkle dots
+            // from animating directly under the cursor. Now you can
+            // actually inspect elements and click on links :V
+            temp1.top = y+o + 15 + 'px';
+            temp1.left = x + 5 + 'px';
         }
     }
 
@@ -92,46 +105,50 @@ function animate(){
 
 animate();
 
-window.onload=function() { if (document.getElementById) {
-    var i, rats, rlef, rdow;
-    for (var i=0; i<sparkles; i++) {
-        var rats=createDiv(3, 3);
-        rats.style.visibility="hidden";
-        rats.style.zIndex="999";
-        document.body.appendChild(tiny[i]=rats);
-        starv[i]=0;
-        tinyv[i]=0;
-        var rats=createDiv(5, 5);
-        rats.style.backgroundColor="transparent";
-        rats.style.visibility="hidden";
-        rats.style.zIndex="999";
-        var rlef=createDiv(1, 5);
-        var rdow=createDiv(5, 1);
-        rats.appendChild(rlef);
-        rats.appendChild(rdow);
-        rlef.style.top="2px";
-        rlef.style.left="0px";
-        rdow.style.top="0px";
-        rdow.style.left="2px";
-        document.body.appendChild(star[i]=rats);
+window.onload=function() {
+    if (document.getElementById) {
+        var i, rats, rlef, rdow;
+        for (var i=0; i<sparkles; i++) {
+            var rats=createDiv(3, 3);
+            rats.style.visibility="hidden";
+            rats.style.zIndex="999";
+            document.body.appendChild(tiny[i]=rats);
+            starv[i]=0;
+            tinyv[i]=0;
+            var rats=createDiv(5, 5);
+            rats.style.backgroundColor="transparent";
+            rats.style.visibility="hidden";
+            rats.style.zIndex="999";
+            var rlef=createDiv(1, 5);
+            var rdow=createDiv(5, 1);
+            rats.appendChild(rlef);
+            rats.appendChild(rdow);
+            rlef.style.top="2px";
+            rlef.style.left="0px";
+            rdow.style.top="0px";
+            rdow.style.left="2px";
+            document.body.appendChild(star[i]=rats);
+        }
+        set_width();
+        sparkle();
     }
-    set_width();
-    sparkle();
-}}
+}
 
 function sparkle() {
     var c;
     if (Math.abs(x-ox)>1 || Math.abs(y-oy)>1) {
         ox=x;
         oy=y;
-        for (c=0; c<sparkles; c++) if (!starv[c]) {
-            star[c].style.left=(starx[c]=x)+"px";
-            star[c].style.top=(stary[c]=y+1)+"px";
-            star[c].style.clip="rect(0px, 5px, 5px, 0px)";
-            star[c].childNodes[0].style.backgroundColor=star[c].childNodes[1].style.backgroundColor=(colour=="random")?newColour():colour;
-            star[c].style.visibility="visible";
-            starv[c]=50;
-            break;
+        for (c=0; c<sparkles; c++) {
+            if (!starv[c]) {
+                star[c].style.left=(starx[c]=x)+"px";
+                star[c].style.top=(stary[c]=y+1)+"px";
+                star[c].style.clip="rect(0px, 5px, 5px, 0px)";
+                star[c].childNodes[0].style.backgroundColor=star[c].childNodes[1].style.backgroundColor=(colour=="random")?newColour():colour;
+                star[c].style.visibility="visible";
+                starv[c]=50;
+                break;
+            }
         }
     }
     for (c=0; c<sparkles; c++) {
