@@ -1,0 +1,31 @@
+{
+  "name": "wedding_wobsite",
+  "version": "1.0.0",
+  "description": "Website with logistics and rsvp for Brent and Katie's wedding",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js",
+    "devstart": "nodemon app.js",
+    "debug": "DEBUG=express-locallibrary-tutorial:* npm run devstart"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bamrhein/wedding_wobsite.git"
+  },
+  "author": "Brent Amrhein",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bamrhein/wedding_wobsite/issues"
+  },
+  "homepage": "https://github.com/bamrhein/wedding_wobsite#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "ejs": "^3.0.1",
+    "express": "^4.17.1",
+    "path": "^0.12.7"
+  }
+}
