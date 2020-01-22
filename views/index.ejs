@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<!--
+
+Katie and I wanted to make a retro, geocities-esque, Web 1.0 wobsite.
+Here's what we came up with.
+
+Given the style decision, I set out to "code" the frontend to be as
+"Web 1.0" as possible, which meant no frameworks and no responsive CSS.
+That didn't last long, because I really wanted it to look good on
+mobile devices. So I added responsive CSS. Still no Bootstrap, though!
+
+I also threw in some third-party JS for vanity features like the
+sparkle cursor and scrollbar, per Katie's request. ;)
+
+The implementation is still pretty straightforward and simple. I'm sure
+a *real* frontend dev could do much better. Please do! I hate frontend!
+
+https://github.com/bamrhein/wedding_wobsite
+
+-->
+
+<html>
+<head>
+    <title>Burger &amp; King</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- sparkle_cursor.js -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="js/sparkle_cursor.js"></script>
+
+    <!-- glitter scrollbar -->
+    <link rel="stylesheet" href="css/glitterbar.css">
+
+</head>
+
+<body>
+    <img src="images/lignelongue_rosesrose_anim.gif" />
+
+    <div class="row">
+        <div class="left">
+            <img class="banner-img" src="images/flycupid.gif"/>
+        </div>
+        <div class="middle title">~ B & K ~</div>
+        <div class="right">
+            <img class="banner-img" src="images/butterflyrockplant.gif" />
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="left"><p></p></div>
+        <div class="middle">
+            <img class="home-img" src="images/brent_katie_rock_border.png" />
+            <p class="home-text">Moab, Utah - 05/02/2020</p>
+        </div>
+        <div class="right"><p></p></div>
+    </div>
+
+    <div class="row footer">
+        <img class="tree-sep" src="images/treesep4.gif" />
+    </div>
+
+    <div class="row footer">
+        <div>~</div>
+        <div><a href="/">home</a></div>
+        <div>-</div>
+        <div><a href="/rsvp">rsvp</a></div>
+        <div>-</div>
+        <div><a href="/logistics">logistics</a></div>
+        <div>~</div>
+    </div>
+
+</body>
+
+</html>

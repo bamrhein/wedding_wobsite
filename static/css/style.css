@@ -1,0 +1,210 @@
+html, body, p, h1, h2, h3 form, div, ul, ol, li, table, tbody, tr, td, th, a {
+    /*background-color: #9EB490;*/
+    background-color: #9fbda0;
+    font-family: courier;
+}
+
+body {
+    text-align: center;
+    width: 100%;
+    margin: 5% 0%;
+    /*font-size: 1vw;*/
+}
+
+a {
+    color: #000000;
+}
+
+.box {
+    margin: 15px;
+    border: 3px solid #999999;
+    padding: 50px;
+    overflow: auto !important;
+}
+
+.box p {
+    background-color: inherit;
+}
+
+
+/**********************************************************************
+ * Responsive + grid CSS
+ **********************************************************************/
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.left {
+    width: 25%;
+    float: left;
+}
+
+.left .banner-img {
+    float: right;
+}
+
+.middle {
+    width: 50%;
+    float: left;
+}
+
+.right {
+    width: 25%;
+    float: left;
+}
+
+.right .banner-img {
+    float: left;
+}
+
+
+
+@media only screen and (max-width: 768px) {
+    .title {
+        font-size: 5vw;
+    }
+
+    .banner-img {
+        width: 20vw;
+        height: 20vw;
+        top: 0;
+    }
+
+    .home-img {
+        width: 40vw;
+    }
+
+    .home-text {
+        font-size: 3.5vw;
+    }
+
+    .tree-sep {
+        width: 80%;
+        height: 80%;
+        margin-top: 8%;
+    }
+
+    /**
+     * Form styling
+     */
+    form {
+        text-align: left;
+        margin: 0 auto;
+    }
+
+    form input {
+        margin: 15px 0px;
+        padding: 0px 0px;
+        width: 100%;
+        font-size: 5vw;
+    }
+
+    form input[type="radio"] {
+        width: 1em;
+        margin-right: 0;
+    }
+
+    form .radio-wrapper > input,
+    form .radio-wrapper > div {
+        display: inline-block;
+        *display: inline;
+    }
+
+    .radio-text {
+        font-size: 2.8vw;
+    }
+
+    form input[type="submit"] {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+    }
+
+    .footer {
+        width: 100%;
+        margin-top: 39px;
+    }
+
+    .footer div {
+        font-size: 3.5vw;
+        text-align: center;
+        display: inline-block;
+        *display: inline;
+        margin: 0% 2%;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .title {
+        font-size: 3.2vw;
+        vertical-align: top;
+    }
+
+    .banner-img {
+        width: 90px;
+        height: 98px;
+        top: 0;
+    }
+
+    .home-img {
+        width: 240px;
+    }
+
+    .tree-sep {
+        /*margin-top: 4%;*/
+        margin: 2% auto;
+    }
+
+    /**
+     * Form styling
+     */
+    form {
+        text-align: left;
+        margin: 5px auto;
+        width: 50%;
+    }
+
+    form input {
+        margin: 15px 0px;
+        padding: 0px 0px;
+        width: 100%;
+        font-size: 139%;
+    }
+
+    form input[type="radio"] {
+        width: 1em;
+        margin-right: 0;
+    }
+
+    form .radio-wrapper > input,
+    form .radio-wrapper > div {
+        display: inline-block;
+        *display: inline;
+    }
+
+    form input[type="submit"] {
+        width: 20%;
+        margin-left: 40%;
+        margin-right: 40%;
+    }
+
+    .submitted {
+        border: 2px solid green;
+        padding: 15px;
+    }
+
+    .footer {
+        width: 100%;
+        margin-top: 39px;
+    }
+
+    .footer div {
+        text-align: center;
+        display: inline-block;
+        *display: inline;
+        margin: 0% 2%;
+    }
+}
