@@ -13,7 +13,7 @@ app.use(bodyParser.urlencoded({ extended: false }))
 
 app.set('view engine', 'ejs');
 
-app.listen(3010, 'localhost', () => {
+app.listen(3010, '127.0.0.1', () => {
   console.log('brentandkatie.wedding listening on port 3010');
 });
 
