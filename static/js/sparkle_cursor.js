@@ -1,5 +1,5 @@
 /**
- * Taken and modified from https://codepen.io/sarahwfox/pen/pNrYGb
+ * Taken and lightly modified from https://codepen.io/sarahwfox/pen/pNrYGb
  *
  * Thanks, Sarah!
  */

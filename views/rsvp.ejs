@@ -10,6 +10,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script type="text/javascript" src="/js/jquery-3.4.1.min.js"></script>
+    <!-- <script type="text/javascript" src="/js/response.js"></script> -->
     <script type="text/javascript" src="/js/sparkle_cursor.js"></script>
 
     <!-- glitter scrollbar -->
@@ -34,21 +35,23 @@
     <div class="row">
         <div class="left"><p></p></div>
         <div class="middle">
-            <form action="/rsvp" method="post">
-                <input type="text" name="fullname" placeholder="full name" value="<%= fullname %>" />
+            <form action="/rsvp" method="post" id="rsvp-form">
+                <input type="text" name="fullname" id="fullname" placeholder="full name" value="<%= fullname %>" />
                 <br/>
-                <input type="text" name="phone" placeholder="phone number" value="<%= phone %>" />
+                <!-- <input type="tel" name="phone" id="phone" placeholder="phone number" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" value="<%= phone %>" />
+                <div class="comment">e.g. 444-444-4444</div> -->
+                <input type="tel" name="phone" id="phone" placeholder="phone number" value="<%= phone %>" />
                 <br/>
-                <input type="text" name="email" placeholder="email" value="<%= email %>" />
+                <input type="email" name="email" id="email" placeholder="email" value="<%= email %>" />
                 <br/>
                 <div class="radio-wrapper">
-                    <input type="radio" name="coming" value="Yes" <%= coming %> />
+                    <input type="radio" name="attending" id="attending" value="Yes" <%= attending %> />
                     <div class="radio-text">we'll b there!</div>
                     <br/>
-                    <input type="radio" name="coming" value="No" <%= notComing %> />
+                    <input type="radio" name="attending" id="not-attending" value="No" <%= notAttending %> />
                     <div class="radio-text">we'll b somewhere else :(</div>
                 </div>
-                <input type="submit" value="submit" />
+                <button type="submit" class="submit" id="#rsvp-submit">Submit</button>
             </form>
         </div>
         <div class="right"><p></p></div>
@@ -57,7 +60,12 @@
     <div class="row">
         <div class="left"><p></p></div>
         <div class="middle">
-            <p class='submitted' style="display: <%= display %>"><%= message %></p>
+            <div class="success" style="display: <%= successDisplay %>"><%= successMsg %></div>
+            <div class="error-box" style="display: <%= errorDisplay %>">
+                <ul class="errors">
+                    <%- errorMsg %>
+                </ul>
+            </div>
         </div>
         <div class="right"><p></p></div>
     </div>

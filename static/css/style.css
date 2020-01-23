@@ -117,11 +117,48 @@ a {
         font-size: 2.8vw;
     }
 
-    form input[type="submit"] {
+    /*form input[type="submit"] {
         -webkit-appearance: none;
         -moz-appearance: none;
         appearance: none;
+    }*/
+
+    button.submit {
+        width: 20%;
+        margin-left: 40%;
+        margin-right: 40%;
+        margin-top: 20px;
+        text-align: center;
     }
+
+    .comment {
+        color: #444444;
+        margin-top: 0px;
+    }
+
+    .success {
+        border: 2px solid green;
+        padding: 15px;
+        display: none;
+    }
+
+    .error-box {
+        border: 2px solid red;
+        background-color: pink;
+        padding: 15px;
+        display: none;
+    }
+
+    .errors {
+        background-color: pink;
+        list-style-type: none;
+    }
+
+    .errors li {
+        background-color: pink;
+        margin: 8px auto;
+    }
+
 
     .footer {
         width: 100%;
@@ -185,15 +222,40 @@ a {
         *display: inline;
     }
 
-    form input[type="submit"] {
+    button.submit {
         width: 20%;
         margin-left: 40%;
         margin-right: 40%;
+        margin-top: 20px;
+        text-align: center;
     }
 
-    .submitted {
+    .comment {
+        color: #444444;
+        margin-top: 0px;
+    }
+
+    .success {
         border: 2px solid green;
         padding: 15px;
+        display: none;
+    }
+
+    .error-box {
+        border: 2px solid red;
+        background-color: pink;
+        padding: 15px;
+        display: none;
+    }
+
+    .errors {
+        background-color: pink;
+        list-style-type: none;
+    }
+
+    .errors li {
+        background-color: pink;
+        margin: 8px auto;
     }
 
     .footer {
