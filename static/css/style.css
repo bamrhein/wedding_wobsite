@@ -1,5 +1,5 @@
 html, body, p, h1, h2, h3 form, div, ul, ol, li, table, tbody, tr, td, th, a {
-    /*background-color: #9EB490;*/
+    /*background-color: #9db799;*/
     background-color: #9fbda0;
     font-family: courier;
 }
@@ -124,11 +124,11 @@ a {
     }*/
 
     button.submit {
-        width: 20%;
-        margin-left: 40%;
-        margin-right: 40%;
-        margin-top: 20px;
-        text-align: center;
+        padding: 2% 20%;
+        margin: auto 20%;
+        font-size: 2.8vw;
+        border: 2px solid green;
+        background-color: #dfe6d3;
     }
 
     .comment {
@@ -161,7 +161,6 @@ a {
         background-color: pink;
         margin: 8px auto;
     }
-
 
     .footer {
         width: 100%;
@@ -225,12 +224,16 @@ a {
         *display: inline;
     }
 
+    .radio-text {
+        /*font-size: 2.8vw;*/
+    }
+
     button.submit {
-        width: 20%;
-        margin-left: 40%;
-        margin-right: 40%;
-        margin-top: 20px;
-        text-align: center;
+        padding: 2% 20%;
+        margin: auto 20%;
+        font-size: 12px;
+        border: 2px solid green;
+        background-color: #dfe6d3;
     }
 
     .comment {
