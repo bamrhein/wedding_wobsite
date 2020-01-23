@@ -132,11 +132,13 @@ a {
     }
 
     .comment {
+        font-size: 2.8vw;
         color: #444444;
         margin-top: 0px;
     }
 
     .success {
+        font-size: 2.8vw;
         border: 2px solid green;
         padding: 15px;
         display: none;
@@ -155,6 +157,7 @@ a {
     }
 
     .errors li {
+        font-size: 2.8vw;
         background-color: pink;
         margin: 8px auto;
     }
