@@ -98,7 +98,11 @@ a {
      */
     .box p {
         background-color: inherit;
-        font-size: 3vw;
+        font-size: 3.5vw;
+        line-height: 1.4;
+        text-align: left;
+        margin-left: 4px;
+        margin-right: 4px;
     }
 
 
@@ -209,6 +213,19 @@ a {
     .tree-sep {
         /*margin-top: 4%;*/
         margin: 2% auto;
+    }
+
+
+    /**
+     * Logistics box styling
+     */
+    .box p {
+        background-color: inherit;
+        /*font-size: 3.5vw;*/
+        line-height: 1.4;
+        text-align: left;
+        margin-left: 12px;
+        margin-right: 12px;
     }
 
 
