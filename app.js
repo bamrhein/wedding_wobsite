@@ -2,18 +2,15 @@ const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
 // const createError = require('http-errors');
-const logger = require('morgan');
+// const logger = require('morgan');
 
 const app = express();
-
 
 // The 'static' directory is for client-side content/styling/scripts.
 app.use(express.static('static'));
 app.use('/css', express.static(path.join(__dirname, 'static/css')));
 app.use('/images', express.static(path.join(__dirname, 'static/images')));
 app.use('/js', express.static(path.join(__dirname, 'static/js')));
-
-// app.use(express.urlencoded({ extended: false }));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.json());
 
@@ -32,6 +29,7 @@ app.use('/', indexRouter);
 app.use('/rsvp', rsvpRouter);
 app.use('/logistics', logisticsRouter);
 
+
 // HTTP error handling
 // app.use(function(req, res, next) {
 //   next(createError(404));
@@ -42,3 +40,6 @@ app.use('/logistics', logisticsRouter);
 app.listen(3010, '127.0.0.1', () => {
   console.log('brentandkatie.wedding listening on port 3010');
 });
+
+
+module.exports = app;

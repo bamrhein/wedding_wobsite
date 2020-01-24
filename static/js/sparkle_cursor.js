@@ -1,7 +1,11 @@
 /**
- * Taken and lightly modified from https://codepen.io/sarahwfox/pen/pNrYGb
+ * Taken from https://codepen.io/sarahwfox/pen/pNrYGb
  *
  * Thanks, Sarah!
+ *
+ *
+ * Modified to animate the sparkles slightly behind the cursor
+ * so that you can actually click on things...
  */
 
 var colour="random"; // "random" can be replaced with any valid colour ie: "red"...

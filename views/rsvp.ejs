@@ -10,11 +10,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script type="text/javascript" src="/js/jquery-3.4.1.min.js"></script>
-    <!-- <script type="text/javascript" src="/js/response.js"></script> -->
     <script type="text/javascript" src="/js/sparkle_cursor.js"></script>
 
     <!-- glitter scrollbar -->
     <link rel="stylesheet" href="/css/glitterbar.css">
+
+    <!-- confetti -->
+    <link rel="stylesheet" href="/css/confetti.css">
+    <script type="text/javascript" src="/js/confetti.js"></script>
 
 </head>
 
@@ -45,10 +48,10 @@
                 <input type="email" name="email" id="email" placeholder="email" value="<%= email %>" />
                 <br/>
                 <div class="radio-wrapper">
-                    <input type="radio" name="attending" id="attending" value="Yes" <%= attending %> />
+                    <input type="radio" name="attending" id="attending" value="yes" <%= attending %> />
                     <div class="radio-text">we'll b there!</div>
                     <br/>
-                    <input type="radio" name="attending" id="not-attending" value="No" <%= notAttending %> />
+                    <input type="radio" name="attending" id="not-attending" value="no" <%= notAttending %> />
                     <div class="radio-text">we'll b somewhere else :(</div>
                 </div>
                 <button type="submit" class="submit" id="#rsvp-submit">Submit</button>

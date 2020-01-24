@@ -23,3 +23,6 @@ like the sparkle cursor, per Katie's request. :)
 
 The overall implementation is pretty straightforward and simple. I'm sure
 a *real* frontend dev could do much better. Please do! I hate frontend!
+
+The backend is very _non_-retro. It's NodeJS and MongoDB. Potentially
+overkill, but it's easy, and anything is better than PHP. :B
