@@ -3,6 +3,8 @@ brentandkatie.wedding
 
 A very cool Geocities-esque, Web 1.0 wobsite for our upcoming wedding!
 
+_Work in progress_
+
 ----------------------------------------------------------------------
 
 Katie and I wanted to make a retro, Geocities-esque, Web 1.0 wobsite.
