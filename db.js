@@ -2,10 +2,10 @@ const config = require('./config.json');
 const mongoose = require('mongoose');
 
 // TODO: Add detection for dev vs prod environments
-mongoose.connect(config.dev.db.uri, {
+mongoose.connect(config.db.uri, {
 	useNewUrlParser: true,
 	useUnifiedTopology: true
-});
+}).catch(err => console.log('Mongoose connection error: ' + err));
 
 // Log connection errors
 mongoose.connection.on('error',

@@ -6,6 +6,26 @@ const { check, validationResult } = require('express-validator');
 
 const { mongoose, RSVPModel } = require('../db');
 
+
+// Some helper functions
+
+function getSuccessMsg(fields) {
+  if (fields.attending) {
+    return "WOOO! We can't wait to see you in Moab!";
+  }
+  return "Sorry you can't make it. We still love you... :-/";
+}
+
+function getErrorMsg(errors) {
+  if (errors.isEmpty()) { return ''; }
+
+  for (var e of errors.array()) {
+    errorMsg += `<li>${e.msg}</li>\n`;
+  }
+  return errorMsg;
+}
+
+
 router.get('/', (req, res) => {
     // Include all the variables to make templating simple.
   res.render('rsvp', {
@@ -25,7 +45,6 @@ router.post('/', [
   check('fullname', 'Please submit a valid name.').isLength({ min: 5, max: 30 }),
   check('phone', 'Please submit a valid phone number.').isLength({ min: 10, max: 16 }),
   check('email', 'Please submit a valid email address.').isEmail()
-                                                        // .normalizeEmail()
                                                         .isLength({min: 3, max: 50 }),
   check('attending', "Please choose whether or not you'll be attending.").notEmpty()
 ], async (req, res) => {
@@ -35,22 +54,9 @@ router.post('/', [
   // Set 'attending' to a boolean value.
   req.body.attending = req.body.attending == 'yes';
 
-  let successMsg = '';
-  let errorMsg = '';
   const errors = validationResult(req);
-
-  // TODO: Clean this up?
-  if (!errors.isEmpty()) {
-    for (var e of errors.array()) {
-      errorMsg += `<li>${e.msg}</li>\n`;
-    }
-  } else {
-    if (req.body.attending) {
-      successMsg = "WOOO! We can't wait to see you in Moab!";
-    } else {
-      successMsg = "Sorry you can't make it. We still love you... :-/";
-    }
-  }
+  const errorMsg = getErrorMsg(errors);
+  const successMsg = getSuccessMsg(req.body);
 
   // Check for an existing document that matches the email address.
   // If found, update the document.
