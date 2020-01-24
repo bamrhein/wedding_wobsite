@@ -8,12 +8,8 @@ const app = express();
 
 // The 'static' directory is for client-side content/styling/scripts.
 app.use(express.static('static'));
-app.use('/css', express.static(path.join(__dirname, 'static/css')));
-app.use('/images', express.static(path.join(__dirname, 'static/images')));
-app.use('/js', express.static(path.join(__dirname, 'static/js')));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.json());
-// app.use('/favicon.ico', express.static(path.join(__dirname, 'static/images/favicon.ico')));
 
 
 // View engine
