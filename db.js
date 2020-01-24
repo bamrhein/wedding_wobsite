@@ -5,6 +5,9 @@ const mongoose = require('mongoose');
 mongoose.connect(config.db.uri, {
 	useNewUrlParser: true,
 	useUnifiedTopology: true
+}, {
+  user: config.db.user,
+  pass: config.db.pass
 }).catch(err => console.log('Mongoose connection error: ' + err));
 
 // Log connection errors
