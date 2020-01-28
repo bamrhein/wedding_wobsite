@@ -5,7 +5,7 @@ const validator = require('express-validator');
 const { check, validationResult } = require('express-validator');
 
 const { mongoose, RSVPModel } = require('../db');
-
+const logging = require('../logging.js');
 
 // Some helper functions
 
@@ -42,11 +42,11 @@ router.get('/', (req, res) => {
 });
 
 router.post('/', [
-  check('fullname', 'Please submit a valid name.').isLength({ min: 5, max: 30 }),
-  check('phone', 'Please submit a valid phone number.').isLength({ min: 10, max: 16 }),
-  check('email', 'Please submit a valid email address.').isEmail()
+  check('fullname', "Is that really your name?").isLength({ min: 5, max: 30 }),
+  check('phone', "Doesn't quack like a phone number...").isLength({ min: 10, max: 16 }),
+  check('email', "That can't be your email address. Do better.").isEmail()
                                                         .isLength({min: 3, max: 50 }),
-  check('attending', "Please choose whether or not you'll be attending.").notEmpty()
+  check('attending', "Tell us whether you'll be there or not!!").notEmpty()
 ], async (req, res) => {
   // Laffo if you use caps in your email address.
   req.body.email = req.body.email.toLowerCase();
@@ -54,9 +54,12 @@ router.post('/', [
   // Set 'attending' to a boolean value.
   req.body.attending = req.body.attending == 'yes';
 
+  // Log the RSVP post body
+  logging.rsvp.info(JSON.stringify(req.body));
+
   const errors = validationResult(req);
-  const errorMsg = getErrorMsg(errors);
-  const successMsg = getSuccessMsg(req.body);
+  let errorMsg = getErrorMsg(errors);
+  let successMsg = getSuccessMsg(req.body);
 
   // Check for an existing document that matches the email address.
   // If found, update the document.

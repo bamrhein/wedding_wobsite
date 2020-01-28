@@ -2,9 +2,10 @@ const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
 // const createError = require('http-errors');
-// const logger = require('morgan');
+const rfs = require('rotating-file-stream');
 
 const app = express();
+
 
 // The 'static' directory is for client-side content/styling/scripts.
 app.use(express.static('static'));

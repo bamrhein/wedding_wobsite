@@ -30,7 +30,9 @@
     "http-errors": "^1.7.3",
     "mongodb": "^3.5.2",
     "mongoose": "^5.8.9",
-    "morgan": "^1.9.1",
-    "path": "^0.12.7"
+    "path": "^0.12.7",
+    "rotating-file-stream": "^2.0.2",
+    "winston": "^3.2.1",
+    "winston-daily-rotate-file": "^4.4.2"
   }
 }
