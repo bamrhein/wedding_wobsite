@@ -4,8 +4,10 @@
  * Thanks, Sarah!
  *
  *
- * Modified to animate the sparkles slightly behind the cursor
- * so that you can actually click on things...
+ * Modified to animate the sparkles slightly behind the cursor so that
+ * you can actually click on things...
+ *
+ * Also added a condition to prevent any animation on mobile devices.
  */
 
 var colour="random"; // "random" can be replaced with any valid colour ie: "red"...
@@ -38,22 +40,60 @@ a=(ns||n6)?'':'all.';
 n6r=(n6)?'")':'';
 s=(ns)?'':'.style';
 
-if (ns){
-    for (i = 0; i < n; i++)
-        document.write('<layer name="dots'+i+'" top=0 left=0 width='+i/2+' height='+i/2+' bgcolor=#ff0000></layer>');
+
+// Only animate in "desktop" browsers.
+if (document.documentElement.clientWidth > 768) {
+
+    if (ns){
+        for (i = 0; i < n; i++)
+            document.write('<layer name="dots'+i+'" top=0 left=0 width='+i/2+' height='+i/2+' bgcolor=#ff0000></layer>');
+    }
+
+    if (ie)
+        document.write('<div id="con" style="position:absolute;top:0px;left:0px"><div style="position:relative">');
+
+    if (ie||n6){
+        for (i = 0; i < n; i++)
+            document.write('<div id="dots'+i+'" style="position:absolute;top:0px;left:0px;width:'+i/2+'px;height:'+i/2+'px;background:#ff0000;font-size:'+i/2+'"></div>');
+    }
+
+    if (ie)
+        document.write('</div></div>');
+    (ns||n6)?window.captureEvents(Event.MOUSEMOVE):0;
+
+    (ns)?window.onMouseMove=Mouse:document.onmousemove=Mouse;
+
+    animate();
+
+    window.onload=function() {
+        if (document.getElementById) {
+            var i, rats, rlef, rdow;
+            for (var i=0; i<sparkles; i++) {
+                var rats=createDiv(3, 3);
+                rats.style.visibility="hidden";
+                rats.style.zIndex="999";
+                document.body.appendChild(tiny[i]=rats);
+                starv[i]=0;
+                tinyv[i]=0;
+                var rats=createDiv(5, 5);
+                rats.style.backgroundColor="transparent";
+                rats.style.visibility="hidden";
+                rats.style.zIndex="999";
+                var rlef=createDiv(1, 5);
+                var rdow=createDiv(5, 1);
+                rats.appendChild(rlef);
+                rats.appendChild(rdow);
+                rlef.style.top="2px";
+                rlef.style.left="0px";
+                rdow.style.top="0px";
+                rdow.style.left="2px";
+                document.body.appendChild(star[i]=rats);
+            }
+            set_width();
+            sparkle();
+        }
+    }
 }
-
-if (ie)
-    document.write('<div id="con" style="position:absolute;top:0px;left:0px"><div style="position:relative">');
-
-if (ie||n6){
-    for (i = 0; i < n; i++)
-        document.write('<div id="dots'+i+'" style="position:absolute;top:0px;left:0px;width:'+i/2+'px;height:'+i/2+'px;background:#ff0000;font-size:'+i/2+'"></div>');
-}
-
-if (ie)
-    document.write('</div></div>');
-(ns||n6)?window.captureEvents(Event.MOUSEMOVE):0;
 
 function Mouse(evnt) {
     console.log('MOUSE');
@@ -71,8 +111,6 @@ function Mouse(evnt) {
         x = event.x+1;
     }
 }
-
-(ns)?window.onMouseMove=Mouse:document.onmousemove=Mouse;
 
 function animate(){
 
@@ -105,37 +143,6 @@ function animate(){
     }
 
     setTimeout("animate()",10);
-}
-
-animate();
-
-window.onload=function() {
-    if (document.getElementById) {
-        var i, rats, rlef, rdow;
-        for (var i=0; i<sparkles; i++) {
-            var rats=createDiv(3, 3);
-            rats.style.visibility="hidden";
-            rats.style.zIndex="999";
-            document.body.appendChild(tiny[i]=rats);
-            starv[i]=0;
-            tinyv[i]=0;
-            var rats=createDiv(5, 5);
-            rats.style.backgroundColor="transparent";
-            rats.style.visibility="hidden";
-            rats.style.zIndex="999";
-            var rlef=createDiv(1, 5);
-            var rdow=createDiv(5, 1);
-            rats.appendChild(rlef);
-            rats.appendChild(rdow);
-            rlef.style.top="2px";
-            rlef.style.left="0px";
-            rdow.style.top="0px";
-            rdow.style.left="2px";
-            document.body.appendChild(star[i]=rats);
-        }
-        set_width();
-        sparkle();
-    }
 }
 
 function sparkle() {
