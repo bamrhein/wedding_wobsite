@@ -19,6 +19,7 @@ function getSuccessMsg(fields) {
 function getErrorMsg(errors) {
   if (errors.isEmpty()) { return ''; }
 
+  var errorMsg = '';
   for (var e of errors.array()) {
     errorMsg += `<li>${e.msg}</li>\n`;
   }
@@ -96,7 +97,7 @@ router.post('/', [
   // Web 1.0, baybee!!!
   res.render('rsvp', {
     successMsg: successMsg,
-    successDisplay: successMsg ? 'block' : 'none',
+    successDisplay: successMsg && !errorMsg ? 'block' : 'none',
     errorMsg: errorMsg,
     errorDisplay: errorMsg ? 'block' : 'none',
     fullname: req.body.fullname || '',
