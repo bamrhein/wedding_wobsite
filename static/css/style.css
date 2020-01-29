@@ -78,7 +78,7 @@ a {
     .tree-sep {
         width: 80%;
         height: 80%;
-        margin-top: 8%;
+        margin-top: 2%;
     }
 
 
@@ -157,7 +157,7 @@ a {
     .error-box {
         border: 2px solid red;
         background-color: pink;
-        padding: 15px;
+        /*padding: 15px;*/
         margin-top: 15px;
         display: none;
     }
@@ -165,6 +165,7 @@ a {
     .errors {
         background-color: pink;
         list-style-type: none;
+        padding: 0;
     }
 
     .errors li {
