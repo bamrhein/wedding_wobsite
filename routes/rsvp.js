@@ -7,6 +7,7 @@ const { check, validationResult } = require('express-validator');
 const { mongoose, RSVPModel } = require('../db');
 const logging = require('../logging.js');
 
+
 // Some helper functions
 
 function getSuccessMsg(fields) {

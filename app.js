@@ -22,10 +22,12 @@ app.set('view engine', 'ejs');
 const indexRouter = require('./routes/index');
 const rsvpRouter = require('./routes/rsvp');
 const logisticsRouter = require('./routes/logistics');
+const attendingRouter = require('./routes/attending');
 
 app.use('/', indexRouter);
 app.use('/rsvp', rsvpRouter);
 app.use('/logistics', logisticsRouter);
+app.use('/_attending', attendingRouter);
 
 
 // HTTP error handling
