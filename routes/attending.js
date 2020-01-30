@@ -1,47 +1,31 @@
 const express = require('express');
 const router = express.Router();
 
+const config = require('../config.json');
 const { mongoose, RSVPModel } = require('../db');
 const logging = require('../logging.js');
 
 
 router.get('/', (req, res) => {
-  res.render('_attending');
+  res.render('_attending', { friends: [] });
 });
 
 router.post('/', async (req, res) => {
   if (req.body.code != config._attending) {
-    return [];
+    res.render('_attending', { friends: [] });
+    // Return early to avoid doing a db query.
+    return;
   }
 
-  const docs = await RSVPModel.find({}, (err, doc) => {
+  const friends = await RSVPModel.find({}, (err, docs) => {
     if (err) {
       logging.error.error(err.message);
       return [];
     }
-
-    // If a match was found...
-    if (doc) {
-      let updated = false;
-
-      // Compare/update the document's values with the form data.
-      for (var k in req.body) {
-        if (doc[k] != req.body[k]) {
-          doc[k] = req.body[k];
-          updated = true;
-        }
-      }
-
-      if (updated) { doc.save(); }
-
-      return doc;
-    }
-
-    // No matching documents were found.
-    return [];
+    return docs;
   });
 
-  res.render('_attending', { docs: docs });
+  res.render('_attending', { friends: friends });
 });
 
 module.exports = router;

@@ -42,9 +42,21 @@
     </div>
 
     <div class="row">
-        <div class="box" style="background-color: #ebe9a2;">
-
+        <div class="left"><p></p></div>
+        <div class="middle attending">
+        <!-- <div class="attending"> -->
+            <br>
+            <br>
+            <hr>
+            <% for (var i = 0; i < friends.length; i++) { %>
+                <div><%= friends[i].fullname %></div>
+                <div><%= friends[i].phone %></div>
+                <div><%= friends[i].email %></div>
+                <div><%= friends[i].attending ? 'will be in Moab yayayay' : 'is dead to us' %></div>
+                <hr>
+            <% } %>
         </div>
+        <div class="right"><p></p></div>
     </div>
 
     <div class="row footer">
