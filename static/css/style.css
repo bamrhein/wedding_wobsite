@@ -104,10 +104,9 @@ a {
     /**
      * 'Attending' results
      */
-    /*.attending {
-        text-align: left;
+    .attending {
         font-size: 3.5vw;
-    }*/
+    }
 
 
     /**
@@ -246,17 +245,12 @@ a {
     /**
      * 'Attending' results
      */
-/*    .attending {
+    /*.attending {
         text-align: left;
         margin-left: 25%;
         margin-right: 25%;
-    }
+    }*/
 
-    .attending > * {
-        padding-left: 15%;
-        padding-right: 15%;
-    }
-*/
 
     /**
      * Form
