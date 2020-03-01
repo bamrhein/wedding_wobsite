@@ -1,7 +1,7 @@
 brentandkatie.wedding
 =====================
 
-A very cool Geocities-esque, Web 1.0 wobsite for our upcoming wedding!
+A Geocities-esque, Web 1.0 wobsite for our upcoming wedding!
 
 _Work in progress_
 
