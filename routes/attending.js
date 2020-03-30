@@ -7,12 +7,12 @@ const logging = require('../logging.js');
 
 
 router.get('/', (req, res) => {
-  res.render('_attending', { friends: [] });
+  res.render('_attending', { title: '.:* attending *:.', friends: [] });
 });
 
 router.post('/', async (req, res) => {
   if (req.body.code != config._attending) {
-    res.render('_attending', { friends: [] });
+    res.render('_attending', { title: '.:* attending *:.', friends: [] });
     // Return early to avoid doing a db query.
     return;
   }

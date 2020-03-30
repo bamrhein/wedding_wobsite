@@ -31,6 +31,7 @@ function getErrorMsg(errors) {
 router.get('/', (req, res) => {
     // Include all the variables to make templating simple.
   res.render('rsvp', {
+    title: '.:* rsvp *:.',
     successMsg: '',
     successDisplay: 'none',
     errorMsg: '',
