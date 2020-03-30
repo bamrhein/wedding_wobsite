@@ -98,6 +98,7 @@ router.post('/', [
   // NOTE: Re-rendering the page in case the client has JS disabled.
   // Web 1.0, baybee!!!
   res.render('rsvp', {
+    title: '.:* rsvp *:.',
     successMsg: successMsg,
     successDisplay: successMsg && !errorMsg ? 'block' : 'none',
     errorMsg: errorMsg,
