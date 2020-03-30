@@ -5,6 +5,10 @@ A Geocities-esque, Web 1.0 wobsite for our upcoming wedding!
 
 _Work in progress_
 
+![index screenshot](ref/index_view.png)
+
+![rsvp submit screenshot](ref/rsvp_submit.jpg)
+
 ----------------------------------------------------------------------
 
 Katie and I wanted to make a retro, Geocities-esque, Web 1.0 wobsite.
