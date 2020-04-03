@@ -25,7 +25,7 @@ router.post('/', async (req, res) => {
     return docs;
   });
 
-  res.render('_attending', { friends: friends });
+  res.render('_attending', { title: '.:* attending *:.', friends: friends });
 });
 
 module.exports = router;
